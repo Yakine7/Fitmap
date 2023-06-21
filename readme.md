@@ -27,7 +27,7 @@ To run FitMap locally, follow these steps:
 3. Open `index.html` in a web browser.
 
 ## Fitmap Screenshot
-![FitMap Screenshot](https://i.ibb.co/p4xnW5B/Screenshot-1.png)
+![FitMap Screenshot](https://i.imgur.com/Ay4iI7g.png)
 
 ## Contributing
 
