@@ -9,7 +9,7 @@ const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const modal = document.querySelector('.modal');
 const closeButton = document.querySelector('.close');
-
+const formEl = document.getElementsByClassName("form")[0]
 
 class Workout {
   date = new Date();
@@ -136,7 +136,7 @@ class App {
   _showForm(mapE) {
     this.#mapEvent = mapE;
     form.classList.remove('hidden');
-    inputDistance.focus();
+    formEl.scrollIntoView({"behavior":"smooth"});
   }
 
   _hideForm() {
