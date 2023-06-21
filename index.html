@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Fitmap helps you map your workouts for better progress"
+    />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
+    <!-- <script
+      defer
+      src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"
+    ></script> -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <script defer src="script.js"></script>
+
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP6QmuxSS53w_AIIyya2bAQld9A17bYmw"
+      defer
+    ></script> -->
+
+    <title>Fitmap &dash; Mapping Your Workouts for Better Progress</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-icon">
+        <svg viewBox="0 0 370 137.64" class="logo" alt="Logo">
+          <path
+            xmlns="http://www.w3.org/2000/svg"
+            d="M98.466 124.762c-.83 0-3.043.83-4.982.972-1.935.137-8.441-1.245-8.993-1.94-.557-.692-2.218-4.288-3.048-9.27-.83-4.983-3.043-14.116-3.458-15.504-.414-1.382-.278-4.011-.414-5.672-.138-1.66-1.245-2.075-1.94-2.906-.69-.83-.69-5.953-1.798-9.411-1.109-3.458-4.983-13.564-4.983-13.44 0-.109-.007-2.143-.137-3.584-.141-1.523.137-3.736.552-6.227s0-2.906.137-3.6c.141-.69 1.533-7.332 1.533-7.332l.685.138s.83-.138 4.288 2.075 4.983-.278 5.95-2.075c.97-1.799-2.63-3.736-4.289-3.458-1.66.274-4.983-.14-4.983-.693s.83-3.6.83-3.6c2.907-.968 0-8.162.28-11.9.273-3.736-2.907-4.982-3.737-5.54-.734-.489-.063-1.726.103-2.004.255-.055.804-.13 1.697-.034 1.28.138 1.695-.069 2.007-.38.312-.313.163-1.28.104-1.834-.026-.242.071-.704.071-.704.137.01.277-.12.343-.257.208-.432-.104-.631-.138-.942-.035-.312.173-.139.332-.45.16-.311-.298-.795 0-1.038.298-.241.948-.45 1.19-.761.242-.312.069-.727-.173-1.212-.243-.484-1.315-2.006-1.292-2.456.023-.45.372-.607.592-.856.113-.129.284-.338.18-1.134-.102-.786.052.2-.293-1.945-.346-2.146-1.048-2.617-1.548-3.106-1.537-1.499-6.443-3.129-8.64-2.57-6.74 1.715-5.398 8.883-3.807 11.86 1.916 3.589 0 5.396 0 5.396s-1.52.416-2.213.968c-.693.553-1.245 1.245-1.661 1.799-.415.557-1.523.971-2.77 1.523-1.245.552-1.52.968-2.906 1.799-1.382.83-1.104.83-1.798 1.801-.693.968-1.383 1.935-1.799 2.765-.414.83-1.523 1.387-3.184 2.632-1.66 1.247-1.382 1.52-1.939 2.351-.552.83.278 1.94.278 1.94s-.692.414-1.382 1.522c-.693 1.105-1.245 2.351-2.632 4.289-1.383 1.939.44 1.939 3.21 4.982 2.77 3.044 10.406 5.813 10.406 6.228v2.075s-1.271.416-1.854.552c-.581.141-.884.971-1.022 2.492-.14 1.523.442 2.49-.388 3.184-.83.693.083 1.245-.055 1.66-.138.415-.444 2.076-.028 6.228.415 4.152-.844 7.196-2.089 9.55-1.245 2.353-2.22 9.965-2.499 10.517-.278.556-.97 2.353-1.25 1.801-.278-.556-1.8-3.048-4.153-4.293-2.354-1.246-5.813-.83-6.922-1.246-1.104-.414-11.21-3.181-12.592-3.322-1.383-.137-.552-1.245-.968-1.934-.415-.693-2.218-4.153-4.153-4.43-1.939-.28-6.37 4.844-7.614 6.643-1.245 1.798-4.705 4.704-5.535 6.091-.83 1.383-1.66 3.181-.83 4.288.83 1.109 2.77-.83 3.6-1.66.83-.831 1.382-1.8 3.595-2.076 2.218-.278 4.43-.138 6.506-.552 2.075-.414 6.78.83 8.44 1.52 1.661.693 4.845 3.048 9.276 4.845 4.426 1.799 11.762 4.845 13.975 5.676 2.218.83 5.261-1.388 6.506-2.77 1.245-1.383 6.66-14.07 7.474-14.116 0 0 2.491 6.643 7.474 10.932.966.832 2.906 1.109 2.213 8.304-.69 7.2 1.94 11.074 2.906 12.457.97 1.387 4.982 9.135 5.539 10.52.445 1.117 1.26 1.663 1.936 4.567.16.694-.685-.01-.554 1.8.23 3.17 1.661 6.504 4.567 6.366 2.906-.14 3.874-1.937 6.644-3.182 2.77-1.245 8.856-5.676 9.411-7.615.55-1.936-.556-2.077-1.387-2.077zm-46.273-78.92c-.109-.312-2.65-2.075-3.376-2.491-.726-.415-1.607-2.13-1.092-2.388.523-.257 3.376-2.233 3.376-2.233-.35.656 1.096 7.008 1.096 7.121-.001-.005-.004-.005-.004-.01z"
+            fill="#01aac1"
+          />
+          <path
+            d="M127.929 44.662c0-13.69 8.29-15.662 20.045-15.662v9.073c-3.749 0-8.718-.157-8.718 6.625v4.343h8.718v8.718h-8.722v31.837H127.93V57.763H120v-8.726h7.93v-4.371zm32.27-1.697c-3.592 0-6.585-2.92-6.585-6.548 0-3.592 2.993-6.508 6.584-6.508 3.515 0 6.508 2.916 6.508 6.504 0 3.636-2.997 6.552-6.508 6.552zM154.4 89.596V49.041h11.44v40.555h-11.444zm38.305 0c-7.89 0-12.386-4.577-12.386-12.664v-19.17h-7.97v-8.721h2.565c4.303 0 6.666-1.656 6.666-7.732v-5.365h10.26v13.093h8.363v8.718h-8.362v17.953c0 3.627 1.773 5.243 4.694 5.243h3.668v8.645h-7.498zm64.346-41.343c8.681 0 14.284 4.42 14.284 12.742v28.601h-11.364V64.231c0-4.775-2.997-6.868-6.39-6.868-4.065 0-7.652 2.33-7.652 9.352V89.6h-11.48V64.352c0-4.856-2.922-6.985-6.509-6.985-3.947 0-7.615 2.327-7.615 9.938V89.6h-11.323V49.037h11.323v4.775c2.683-3.591 6.787-5.563 11.756-5.563 5.878 0 10.297 2.13 12.426 6.076 2.84-4.064 7.179-6.076 12.548-6.076zm58.584 30.339c0 4.969.473 8.124.986 9.897v1.107H306.01l-.905-4.42c-3.038 3.669-8.286 5.212-13.02 5.212-6.391 0-12.625-2.844-12.625-11.287 0-8.403 6.274-11.243 14.753-13.097l6.666-1.495c2.88-.674 3.906-1.66 3.906-3.316 0-3.988-3.627-5.09-6.827-5.09-4.1 0-7.215 1.615-7.926 6.193l-10.059-1.818c1.697-8.403 7.85-12.225 18.624-12.225 8.12 0 17.04 2.404 17.04 14.636v15.699zm-20 4.1c5.405 0 9.743-3.591 9.743-11.634l-9.626 2.718c-3.156.748-5.446 1.855-5.446 4.578 0 2.916 2.408 4.338 5.328 4.338zm54.835-34.439c10.693 0 19.528 7.85 19.528 21.144s-8.835 21.149-19.528 21.149c-5.284 0-10.019-2.053-12.426-5.761v24.537H326.68V49.041h10.77l.32 5.446c2.245-4.024 7.178-6.234 12.7-6.234zm-2.565 32.86c5.958 0 10.733-4.339 10.733-11.716s-4.775-11.715-10.733-11.715c-6.076 0-10.807 4.614-10.807 11.715s4.731 11.716 10.807 11.716z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+      <!-- <img src="logo.png" alt="Logo" class="logo" /> -->
+
+      <div class="workouts">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Distance</label>
+            <input class="form__input form__input--distance" placeholder="km" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Duration</label>
+            <input
+              class="form__input form__input--duration"
+              placeholder="min"
+            />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Cadence</label>
+            <input
+              class="form__input form__input--cadence"
+              placeholder="step/min"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Elev Gain</label>
+            <input
+              class="form__input form__input--elevation"
+              placeholder="meters"
+            />
+          </div>
+          <button class="form__btn">OK</button>
+        </form>
+      </div>
+
+      <p class="copyright">&copy; Copyright by Yakine</p>
+    </div>
+
+    <div id="map"></div>
+    <div class="copyright-mobile">
+      <p>&copy; Copyright by Yakine</p>
+    </div>
+    <div id="locationModal" class="modal">
+      <div class="modal-content">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="locationIcon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+          />
+        </svg>
+        <p>Please enable location permission to access the website.</p>
+        <span class="close">Close</span>
+      </div>
+    </div>
+  </body>
+</html>

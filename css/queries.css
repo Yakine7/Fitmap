@@ -1,0 +1,76 @@
+/* 1400px */
+@media (max-width: 88em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .workout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .deleteIcon {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+}
+
+/* Below 1100px */
+@media (max-width: 69em) {
+  .workout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 1.5rem 3rem;
+  }
+  .deleteIcon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
+
+/* Below 900px */
+@media (max-width: 57em) {
+  html {
+    font-size: 50%;
+  }
+
+  .deleteIcon {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+}
+
+/* Below 675px */
+@media (max-width: 43em) {
+  body {
+    display: block;
+    height: 100%;
+  }
+
+  .workouts {
+    height: 100%;
+  }
+
+  #map {
+    height: 80vh;
+  }
+
+  .sidebar > .copyright {
+    display: none;
+  }
+
+  .copyright-mobile {
+    display: block;
+    padding: 1.2rem 0;
+    background-color: var(--color-dark--1);
+    font-size: 1.4rem;
+    color: var(--color-light--1);
+    text-align: center;
+  }
+
+}
